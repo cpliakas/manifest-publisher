@@ -9,7 +9,7 @@
 
 Manifest Publisher is a CLI tool that automatically generates and publishes the
 `manifest.json` file used by the [Phar Update](https://github.com/herrera-io/php-phar-update)
-library in order to add self update capabilities to your [phar](http://php.net/manual/en/intro.phar.php).
+library to add self update capabilities to your [phar](http://php.net/manual/en/intro.phar.php).
 The `manifest.json` file can be published to various targets such as [GitHub Pages](https://pages.github.com/).
 
 ## Background
@@ -22,7 +22,7 @@ to Composer's `composer self-update` command so that your users can keep the
 application up to date. Refer to the [Distributing a PHP CLI app with ease](http://moquet.net/blog/distributing-php-cli/)
 blog post by [Matthieu Moquet](https://github.com/MattKetmo) for a detailed
 walkthrough of the [Phar Update](https://github.com/herrera-io/php-phar-update)
-tool. This project picks up where the blogs post leaves off and provides a more
+tool. This project picks up where the blog post leaves off and provides a more
 robust tool that automatically generates and publishes the `manifest.json` file
 to various targets.
 
