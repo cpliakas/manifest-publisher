@@ -2,7 +2,7 @@
 
 namespace Cpliakas\ManifestPublisher\Test;
 
-use Cpliakas\ManifestPublisher\ManifestPublisher;
+use Cpliakas\ManifestPublisher\Repository;
 
 class DummyTest extends \PHPUnit_Framework_TestCase
 {
@@ -14,7 +14,7 @@ class DummyTest extends \PHPUnit_Framework_TestCase
      */
     public function testAutoload()
     {
-        $class = new ManifestPublisher();
-        $this->assertTrue($class->autoloaded());
+        $class = new Repository('cpliakas/my-repo');
+        $this->assertInstanceOf('Cpliakas\ManifestPublisher\Repository', $class);
     }
 }
