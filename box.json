@@ -1,0 +1,28 @@
+{
+    "chmod": "0755",
+    "directories": ["src"],
+    "files": [
+        "bin/manifest.php",
+        "LICENSE",
+        "vendor/cpliakas/git-wrapper/bin/git-ssh-wrapper.sh",
+        "vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "phing",
+                "test",
+                "tests",
+                "Test",
+                "Tests",
+                "Tester"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "git-version": "package_version",
+    "main": "bin/manifest",
+    "output": "build/manifest.phar",
+    "stub": true
+}

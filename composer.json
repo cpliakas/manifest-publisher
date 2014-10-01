@@ -15,7 +15,6 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "aws/aws-sdk-php": "~2.0",
         "cpliakas/git-wrapper": "~1.0",
         "doctrine/cache": "~1.0",
         "guzzle/http": ">=3.9.0,<4.0.0",
