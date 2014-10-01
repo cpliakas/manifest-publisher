@@ -10,6 +10,6 @@ if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
     require __DIR__ . '/../../../autoload.php';
 }
 
-$application = new Application('PHP Project Starter', '@package_version@');
+$application = new Application('Manifest Publisher', '@package_version@');
 $application->add(new Console\PublishGitHubCommand());
 $application->run();
