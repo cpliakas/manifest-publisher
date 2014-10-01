@@ -1,0 +1,37 @@
+{
+    "name": "cpliakas/manifest-publisher",
+    "type": "library",
+    "description": "A longer description for My Project",
+    "homepage": "https://github.com/cpliakas/manifest-publisher",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "See contributors",
+            "homepage": "https://github.com/cpliakas/manifest-publisher/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cpliakas/manifest-publisher/issues"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "pdepend/pdepend": "~1.0",
+        "phploc/phploc": "~2.0",
+        "phpmd/phpmd": "~1.0",
+        "phpunit/phpunit": "~3.0",
+        "scrutinizer/ocular": "~1.0",
+        "sebastian/phpcpd": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cpliakas\\ManifestPublisher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cpliakas\\ManifestPublisher\\Test\\": "test/"
+        }
+    }
+}
