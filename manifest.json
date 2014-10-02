@@ -1,6 +1,12 @@
 [
     {
         "name": "manifest.phar",
+        "sha1": "ead1283df6ef49b259a5b443e7f412b84d7f1566",
+        "url": "https://github.com/cpliakas/manifest-publisher/releases/download/0.1.3/manifest.phar",
+        "version": "0.1.3"
+    },
+    {
+        "name": "manifest.phar",
         "sha1": "b032400a1986f63240e5659226e9ee8c464ce133",
         "url": "https://github.com/cpliakas/manifest-publisher/releases/download/0.1.2/manifest.phar",
         "version": "0.1.2"
