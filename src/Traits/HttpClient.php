@@ -50,22 +50,22 @@ trait HttpClient
 
     /**
      * @param string  $url
-     * @param string  $target
+     * @param string  $filename
      * @param boolean $overwrite
      */
-    public function downloadFile($url, $target, $overwrite = false)
+    public function downloadFile($url, $filename, $overwrite = false)
     {
-        if (file_exists($target) && !$overwrite) {
+        if (file_exists($filename) && !$overwrite) {
            return;
         }
 
-        $this->prepareDirectory(dirname($target));
+        $this->prepareDirectory(dirname($filename));
 
-        $this->getHttpClient()
-            ->get($url)
-            ->setResponseBody($target)
-            ->send()
-        ;
+        if (!$filedata = @file_get_contents($url)) {
+            throw new \RuntimeException(sprintf('Unable to download archive "%s"', $url));
+        }
+
+        file_put_contents($filename, $filedata);
     }
 
     /**

@@ -5,7 +5,8 @@
         "bin/manifest.php",
         "LICENSE",
         "vendor/cpliakas/git-wrapper/bin/git-ssh-wrapper.sh",
-        "vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem"
+        "vendor/guzzle/guzzle/src/Guzzle/Http/Resources/cacert.pem",
+        "vendor/herrera-io/phar-update/res/schema.json"
     ],
     "finder": [
         {
