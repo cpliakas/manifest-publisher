@@ -12,4 +12,5 @@ if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
 
 $application = new Application('Manifest Publisher', '@package_version@');
 $application->add(new Console\PublishGitHubCommand());
+$application->add(new Console\SelfUpdateCommand());
 $application->run();
