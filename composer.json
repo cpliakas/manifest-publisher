@@ -39,5 +39,6 @@
         "psr-4": {
             "Cpliakas\\ManifestPublisher\\Test\\": "test/"
         }
-    }
+    },
+    "bin": ["bin/manifest"]
 }

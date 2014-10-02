@@ -1,7 +1,6 @@
 # Manifest Publisher
 
 [![Build Status](https://travis-ci.org/cpliakas/manifest-publisher.svg?branch=master)](https://travis-ci.org/cpliakas/manifest-publisher)
-[![Code Coverage](https://scrutinizer-ci.com/g/cpliakas/manifest-publisher/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/cpliakas/manifest-publisher/?branch=master)
 [![HHVM Status](http://hhvm.h4cc.de/badge/cpliakas/manifest-publisher.svg)](http://hhvm.h4cc.de/package/cpliakas/manifest-publisher)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cpliakas/manifest-publisher/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cpliakas/manifest-publisher/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/cpliakas/manifest-publisher/v/stable.svg)](https://packagist.org/packages/cpliakas/manifest-publisher)

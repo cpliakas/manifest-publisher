@@ -8,6 +8,9 @@ filter:
         - src/*
 
 tools:
+    external_code_coverage:
+        runs: 3
+        timeout: 600
     php_analyzer: true
     php_cs_fixer:
         config: { level: psr2 }
