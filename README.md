@@ -7,7 +7,7 @@
 [![Latest Stable Version](https://poser.pugx.org/cpliakas/manifest-publisher/v/stable.svg)](https://packagist.org/packages/cpliakas/manifest-publisher)
 [![License](https://poser.pugx.org/cpliakas/manifest-publisher/license.svg)](https://packagist.org/packages/cpliakas/manifest-publisher)
 
-Want to implement a self-update capability in your [phar](http://php.net/manual/en/intro.phar.php)
+Want to implement and sustain a self-update capability in your [phar](http://php.net/manual/en/intro.phar.php)
 that is similar to Composer's [self-update](https://getcomposer.org/doc/03-cli.md#self-update)
 command?
 
@@ -45,7 +45,7 @@ to GitHub Pages.
 * `php manifest.phar publish:gh-pages vendor/repository`
 
 Update the `manifest.phar` application to the latest stable version (Yes, this
-project [drinks its own champagne](http://en.wikipedia.org/wiki/Eating_your_own_dog_food#Criticism_and_alternative_terms).
+project [drinks its own champagne](http://en.wikipedia.org/wiki/Eating_your_own_dog_food#Criticism_and_alternative_terms)).
 
 * `php manifest.phar self-update`
 
