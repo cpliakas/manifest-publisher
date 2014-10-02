@@ -16,8 +16,8 @@ and [Phar Update](https://github.com/herrera-io/php-phar-update) projects in
 order to make it easy to implement and sustain a self-update capability in your
 phar. From a technical standpoint, it automatically generates and publishes the
 `manifest.json` file used by the [Phar Update](https://github.com/herrera-io/php-phar-update)
-library to determine when your application has an update. The `manifest.json`
-file can be published to various targets, usually [GitHub Pages](https://pages.github.com/).
+library to determine when an update is available for your application. The
+`manifest.json` file can be published to various targets, usually [GitHub Pages](https://pages.github.com/).
 
 ## Background
 
