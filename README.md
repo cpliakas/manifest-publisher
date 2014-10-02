@@ -44,7 +44,7 @@ to GitHub Pages.
 * `php manifest.phar publish:gh-pages vendor/repository`
 
 Update the `manifest.phar` application to the latest stable version (Yes, this
-project [drinks its own champagne](http://en.wikipedia.org/wiki/Eating_your_own_dog_food#Criticism_and_alternative_terms)).
+project [drinks its own champagne](http://en.wikipedia.org/wiki/Eating_your_own_dog_food)).
 
 * `php manifest.phar self-update`
 
