@@ -28,20 +28,17 @@ to various targets.
 
 ## Installation
 
-Manifest Publisher can be installed with [Composer](http://getcomposer.org)
-by adding it as a dependency to your project's composer.json file.
-
-```json
-{
-    "require": {
-        "cpliakas/manifest-publisher": "*"
-    }
-}
-```
-
-Please refer to [Composer's documentation](https://github.com/composer/composer/blob/master/doc/00-intro.md#introduction)
-for more detailed installation and usage instructions.
+Download the `manifest.phar` file from [https://github.com/cpliakas/manifest-publisher/releases](https://github.com/cpliakas/manifest-publisher/releases)
 
 ## Usage
 
+Generate the `manifest.json` for the `vendor/repository` project and publish it
+to GitHub pages. Make sure the `gh-pages` branch is set up according to the
+[documentation](https://help.github.com/articles/creating-project-pages-manually)
+before running the command.
+
 `php manifest.phar publish:gh-pages vendor/repository`
+
+Update the `manifest.phar` application to the latest stable version.
+
+`php manifest.phar self-update`
