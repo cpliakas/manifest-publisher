@@ -55,3 +55,7 @@ project [drinks its own champagne](http://en.wikipedia.org/wiki/Eating_your_own_
 * The `gh-pages` branch has been set up according to [GitHub's documentation](https://help.github.com/articles/creating-project-pages-manually)
 * The phar is distributed via [GitHub Releases](https://github.com/blog/1547-release-your-software)
   with tag names exactly matching the corresponding VCS tags
+
+## Gotchas
+
+* Ensure the `vendor/herrera-io/phar-update/res/schema.json` is included in box.json
