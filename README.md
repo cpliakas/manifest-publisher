@@ -35,6 +35,9 @@ to various targets.
 ## Installation
 
 Download the `manifest.phar` file from [https://github.com/cpliakas/manifest-publisher/releases](https://github.com/cpliakas/manifest-publisher/releases)
+via the browser, or download the latest stable version via the command line:
+
+* `curl -O http://www.chrispliakas.com/manifest-publisher/download/latest/manifest.phar`
 
 ## Usage
 
