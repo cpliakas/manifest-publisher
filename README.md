@@ -62,3 +62,4 @@ project [drinks its own champagne](http://en.wikipedia.org/wiki/Eating_your_own_
 ## Gotchas
 
 * Ensure the `vendor/herrera-io/phar-update/res/schema.json` is included in box.json
+* Manifest Publisher currently does not work with private Github repos
