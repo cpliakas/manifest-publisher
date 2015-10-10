@@ -16,19 +16,21 @@ class Manifest
     /**
      * @param Repository $repository
      */
-    public function __construct(Repository $repository)
+    public function __construct(Repository $repository, Repository $targetRepository)
     {
         $this->repository = $repository;
+        $this->targetRepository = $targetRepository;
     }
 
     /**
      * @param string $packageName
+     * @param string $targetName
      *
      * @return Manifest
      */
-    public static function factory($packageName)
+    public static function factory($packageName, $targetName)
     {
-        return new static(new Repository($packageName));
+        return new static(new Repository($packageName), new Repository($targetName));
     }
 
     /**
@@ -77,7 +79,7 @@ class Manifest
     public function publish(TargetInterface $target)
     {
         $json = $this->jsonEncode($this->build($target));
-        $target->publishManifest($this->repository, $json);
+        $target->publishManifest($this->targetRepository, $json);
     }
 
     /**
