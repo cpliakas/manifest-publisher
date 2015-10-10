@@ -69,6 +69,8 @@ class GitHub implements TargetInterface
      */
     public function checkoutGitHubPages(Repository $repository)
     {
+        $isProjectPage = !preg_match('#\.github\.io$#', $repository->getPackageName());
+        $branch = $isProjectPage ? 'gh-pages' : 'master';
         $directory = $this->getGitHubPagesDirectory($repository);
         $git = $repository->getGitWrapper()->workingCopy($directory);
 
@@ -77,7 +79,7 @@ class GitHub implements TargetInterface
         }
 
         $git
-            ->checkout('gh-pages')
+            ->checkout($branch)
             ->pull()
         ;
 
