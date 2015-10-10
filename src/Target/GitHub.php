@@ -22,7 +22,11 @@ class GitHub implements TargetInterface
         $directory = $this->getPharDirectory($repository, $version);
         $filepath  = $directory . '/' . basename($url);
 
-        $this->downloadFile($url, $filepath, $overwrite);
+        try {
+            $this->downloadFile($url, $filepath, $overwrite);
+        } catch (\RuntimeException $e) {
+            return false;
+        }
         return $filepath;
     }
 
