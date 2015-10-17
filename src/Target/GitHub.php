@@ -51,7 +51,7 @@ class GitHub implements TargetInterface
     {
         $git = $this->checkoutGitHubPages($repository);
 
-        file_put_contents($git->getDirectory() . '/manifest.json', $json);
+        file_put_contents($git->getDirectory() . '/manifest.json', $json . PHP_EOL);
         $git->add('manifest.json');
 
         if ($git->hasChanges()) {
