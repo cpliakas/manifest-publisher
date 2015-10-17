@@ -14,12 +14,17 @@ class Manifest
     protected $repository;
 
     /**
+     * @var Repository
+     */
+    protected $targetRepository;
+
+    /**
      * @param Repository $repository
      */
-    public function __construct(Repository $repository, Repository $targetRepository)
+    public function __construct(Repository $repository, Repository $targetRepository = null)
     {
         $this->repository = $repository;
-        $this->targetRepository = $targetRepository;
+        $this->targetRepository = $targetRepository ?: $repository;
     }
 
     /**
@@ -28,9 +33,12 @@ class Manifest
      *
      * @return Manifest
      */
-    public static function factory($packageName, $targetName)
+    public static function factory($packageName, $targetName = null)
     {
-        return new static(new Repository($packageName), new Repository($targetName));
+        $repository = new Repository($packageName);
+        $targetRepository = ($targetName) ? new Repository($targetName) : null;
+
+        return new static($repository, $targetRepository);
     }
 
     /**

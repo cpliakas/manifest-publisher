@@ -35,7 +35,7 @@ class PublishGitHubCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $packageName = $input->getArgument('package-name');
-        $targetName = $input->getArgument('target-name') ?: $packageName;
+        $targetName = $input->getArgument('target-name');
 
         Manifest::factory($packageName, $targetName)
             ->publish(new Target\GitHub());
