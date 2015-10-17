@@ -22,7 +22,7 @@ class PublishGitHubCommand extends Command
                 'The package name in vendor/project format'
             )
             ->addArgument(
-                'target-name',
+                'target-package-name',
                 InputArgument::OPTIONAL,
                 'The target repo in vendor/project format'
             )
@@ -35,9 +35,9 @@ class PublishGitHubCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $packageName = $input->getArgument('package-name');
-        $targetName = $input->getArgument('target-name');
+        $targetPackageName = $input->getArgument('target-package-name');
 
-        Manifest::factory($packageName, $targetName)
+        Manifest::factory($packageName, $targetPackageName)
             ->publish(new Target\GitHub());
     }
 }

@@ -29,14 +29,14 @@ class Manifest
 
     /**
      * @param string $packageName
-     * @param string $targetName
+     * @param string $targetPackageName
      *
      * @return Manifest
      */
-    public static function factory($packageName, $targetName = null)
+    public static function factory($packageName, $targetPackageName = null)
     {
         $repository = new Repository($packageName);
-        $targetRepository = ($targetName) ? new Repository($targetName) : null;
+        $targetRepository = $targetPackageName ? new Repository($targetPackageName) : null;
 
         return new static($repository, $targetRepository);
     }
