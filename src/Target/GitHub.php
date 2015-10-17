@@ -22,7 +22,11 @@ class GitHub implements TargetInterface
         $directory = $this->getPharDirectory($repository, $version);
         $filepath  = $directory . '/' . basename($url);
 
-        $this->downloadFile($url, $filepath, $overwrite);
+        try {
+            $this->downloadFile($url, $filepath, $overwrite);
+        } catch (\RuntimeException $e) {
+            return false;
+        }
         return $filepath;
     }
 
@@ -47,7 +51,7 @@ class GitHub implements TargetInterface
     {
         $git = $this->checkoutGitHubPages($repository);
 
-        file_put_contents($git->getDirectory() . '/manifest.json', $json);
+        file_put_contents($git->getDirectory() . '/manifest.json', $json . PHP_EOL);
         $git->add('manifest.json');
 
         if ($git->hasChanges()) {
@@ -65,6 +69,8 @@ class GitHub implements TargetInterface
      */
     public function checkoutGitHubPages(Repository $repository)
     {
+        $isProjectPage = !preg_match('#\.github\.io$#', $repository->getPackageName());
+        $branch = $isProjectPage ? 'gh-pages' : 'master';
         $directory = $this->getGitHubPagesDirectory($repository);
         $git = $repository->getGitWrapper()->workingCopy($directory);
 
@@ -73,7 +79,7 @@ class GitHub implements TargetInterface
         }
 
         $git
-            ->checkout('gh-pages')
+            ->checkout($branch)
             ->pull()
         ;
 

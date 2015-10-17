@@ -14,21 +14,31 @@ class Manifest
     protected $repository;
 
     /**
+     * @var Repository
+     */
+    protected $targetRepository;
+
+    /**
      * @param Repository $repository
      */
-    public function __construct(Repository $repository)
+    public function __construct(Repository $repository, Repository $targetRepository = null)
     {
         $this->repository = $repository;
+        $this->targetRepository = $targetRepository ?: $repository;
     }
 
     /**
      * @param string $packageName
+     * @param string $targetPackageName
      *
      * @return Manifest
      */
-    public static function factory($packageName)
+    public static function factory($packageName, $targetPackageName = null)
     {
-        return new static(new Repository($packageName));
+        $repository = new Repository($packageName);
+        $targetRepository = $targetPackageName ? new Repository($targetPackageName) : null;
+
+        return new static($repository, $targetRepository);
     }
 
     /**
@@ -77,7 +87,7 @@ class Manifest
     public function publish(TargetInterface $target)
     {
         $json = $this->jsonEncode($this->build($target));
-        $target->publishManifest($this->repository, $json);
+        $target->publishManifest($this->targetRepository, $json);
     }
 
     /**

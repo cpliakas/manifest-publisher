@@ -68,7 +68,7 @@ class Repository
         }
 
         if ($tag !== null) {
-            $git->checkout($tag);
+            $git->checkout($tag, ['f' => true]);
         }
 
         return $git;
